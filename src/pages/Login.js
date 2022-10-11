@@ -36,9 +36,9 @@ const Login = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     if (!isValidEmail(email)) showError("Invalid email address");
-    else if (password.length < 6)
-      showError("Password must be at least 6 characters");
-    if (isValidEmail(email) && password.length > 6) {
+    else if (password.length < 5)
+      showError("Password must be at least 5 characters");
+    if (isValidEmail(email) && password.length > 5) {
       setFormLoading(true);
       const user = await login(email, password);
       if (user) {
