@@ -65,6 +65,14 @@ const Register = () => {
           setFormLoading(false);
         }
 
+  if (user) navigate("/");
+
+  const showError = (error) => {
+    setErrorMsg(error);
+    setTimeout(() => {
+      setErrorMsg("");
+    }, 3000);
+  };
         if (!user)
           showError(
             "Sorry, your password was incorrect. Please double-check your password."
