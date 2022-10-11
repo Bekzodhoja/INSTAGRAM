@@ -148,7 +148,7 @@ const Register = () => {
                         <input
                           type={showPassword ? "password" : "text"}
                           className="text-xs p-3 border-[1px] rounded bg-white w-full border-black"
-                          placeholder="Enter Your Password"
+                          placeholder="Password(12345678)"
                           onChange={(e) => setPassword(e.target.value)}
                           value={password}
                         />
